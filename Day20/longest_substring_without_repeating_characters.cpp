@@ -1,0 +1,28 @@
+#include <iostream>
+#include <algorithm>
+#include <vector>
+using namespace std;
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        vector<int> hash(256, -1);
+        int n = s.size();
+        int l = 0, r = 0, maxLen = 0;
+        while (r<n) {
+            if (hash[s[r]] != -1) {
+                if (hash[s[r]] >= l) {l = hash[s[r]]+1;}
+            }
+            int len = r-l+1;
+            maxLen = max(len, maxLen);
+            hash[s[r]] = r;
+            r++;
+        }  
+        return maxLen;   
+    }
+};
+int main() {
+    Solution s;
+    string str = "abcabcbb";
+    cout << s.lengthOfLongestSubstring(str) << endl; // Output: 3
+    return 0;
+}
