@@ -23,6 +23,6 @@ public:
 int main() {
     Solution s;
     string str = "abcabcbb";
-    cout << s.lengthOfLongestSubstring(str) << endl; // Output: 3
+    cout << s.lengthOfLongestSubstring(str) << endl; 
     return 0;
 }

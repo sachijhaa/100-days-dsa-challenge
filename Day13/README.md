@@ -1,6 +1,6 @@
 # Day 13 - Majority Element
 
-## Problem
+## Problem 
 LeetCode 169 - Majority Element
 
 ## Approach
