@@ -89,6 +89,7 @@ int main() {
     root->right = new TreeNode(3);
     root->right->left = new TreeNode(4);
     root->right->right = new TreeNode(5);
+    root->right->right = new TreeNode(6);
     Codec ser, deser;
     string data = ser.serialize(root);
     cout << "Serialized String:\n";
